@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AJ Ohi · Developer</title>
+<meta name="description" content="AJ Ohi, developer. I build fast, clean websites that people enjoy using.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="loader" aria-hidden="true"><span class="rec">●</span> REC <span id="loaderTime">00:00:00:00</span></div>
+<div class="grain" aria-hidden="true"></div>
+<div id="progress" aria-hidden="true"></div>
+
+<!-- Cursor follower (desktop only) -->
+<div id="cur" aria-hidden="true">
+  <div class="halo"></div>
+  <div class="ring"></div>
+  <div class="dot"></div>
+</div>
+
+<header id="nav">
+  <a class="brand" href="#top" id="navName">AJ Ohi</a>
+  <nav>
+    <a href="#work">Work</a>
+    <a href="#process">Process</a>
+    <a href="#about">About</a>
+    <a href="#contact" class="pill-cream">Let’s talk</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-text">
+        <div class="badge"><i></i> Available for new projects</div>
+        <h1 id="heroName">AJ<br>Ohi</h1>
+        <p class="tagline" id="tagline"></p>
+        <div class="cta">
+          <a class="btn btn-cream" href="#work">See my work</a>
+          <a class="btn btn-ghost" href="#contact">Start a project</a>
+        </div>
+        <ul class="tools" id="tools"></ul>
+      </div>
+    </div>
+
+    <!-- Effect 1: hanging ID card -->
+    <div id="idlayer" aria-label="Hanging ID card">
+      <svg id="strap" width="100%" height="100%">
+        <path id="strapPath" fill="none" stroke="var(--accent)" stroke-width="16" stroke-linejoin="round" stroke-linecap="round"/>
+        <path id="strapText" fill="none" stroke="none"/>
+        <text class="strap-text"><textPath id="strapTextPath" href="#strapText" startOffset="0"></textPath></text>
+      </svg>
+      <div id="card">
+        <div class="clip"></div>
+        <div class="card-body">
+          <div class="card-top"><span>CREW PASS</span><span class="rec-red">● REC</span></div>
+          <div class="card-photo" id="cardPhoto">
+            <img src="assets/me-front.webp" alt="" draggable="false">
+            <b></b><b></b><b></b><b></b>
+          </div>
+          <div class="card-job" id="cardJob">DEVELOPER</div>
+          <div class="card-name" id="cardName">AJ Ohi</div>
+          <div class="card-meta"><span id="cardId">ID · 2026 · XX-01</span><span class="barcode"></span></div>
+        </div>
+      </div>
+      <div class="card-caption">GRAB THE CARD ↑</div>
+    </div>
+  </section>
+
+  <!-- Skills strip -->
+  <section class="strip" aria-label="Skills">
+    <div class="strip-track" id="stripTrack"></div>
+  </section>
+
+  <!-- 01 Work -->
+  <section id="work" class="section">
+    <div class="wrap">
+      <div class="label">01 — Selected work</div>
+      <div class="head-row">
+        <h2>Things I’ve built.</h2>
+        <div class="arrows">
+          <button id="railPrev" aria-label="Previous">←</button>
+          <button id="railNext" aria-label="Next">→</button>
+        </div>
+      </div>
+    </div>
+    <div class="rail" id="rail"></div>
+  </section>
+
+  <!-- 02 Process -->
+  <section id="process" class="section">
+    <div class="wrap">
+      <div class="label">02 — Process</div>
+      <h2>How a project comes together.</h2>
+      <div class="timeline-wrap">
+        <div class="timeline" id="timeline">
+          <div class="tl-ruler"></div>
+          <div class="tl-track"><span class="tl-name">V2</span><i style="left:6%;width:26%"></i><i style="left:40%;width:30%"></i></div>
+          <div class="tl-track"><span class="tl-name">V1</span><i style="left:0;width:38%"></i><i style="left:42%;width:24%"></i><i style="left:70%;width:28%"></i></div>
+          <div class="tl-track"><span class="tl-name">A1</span><i class="a" style="left:0;width:55%"></i><i class="a" style="left:58%;width:40%"></i></div>
+          <div class="tl-track"><span class="tl-name">A2</span><i class="a" style="left:12%;width:34%"></i><i class="a" style="left:60%;width:22%"></i></div>
+          <div class="playhead" id="playhead"></div>
+        </div>
+      </div>
+      <ol class="steps" id="steps"></ol>
+    </div>
+  </section>
+
+  <!-- 03 About -->
+  <section id="about" class="section">
+    <div class="wrap about-grid">
+      <!-- Effect 2: mask reveal -->
+      <div>
+        <div class="reveal" id="reveal">
+          <div class="r-base" id="rBase"><img src="assets/me-side.webp" alt="AJ Ohi" draggable="false"></div>
+          <div class="r-top" id="rTop"><img src="assets/me-mask.webp" alt="" draggable="false"><span class="ph-mask" id="phMask">VENOM</span></div>
+          <div class="r-ring" id="rRing"></div>
+        </div>
+        <div class="reveal-cap" id="revealCap">HOVER THE PHOTO</div>
+      </div>
+      <div>
+        <div class="label">03 — About</div>
+        <h2 id="aboutTitle">I build things around the user.</h2>
+        <p class="about-text" id="aboutText"></p>
+        <div class="pills" id="strengths"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 Contact -->
+  <section id="contact" class="section">
+    <div class="wrap">
+      <div class="contact-card">
+        <div class="label dark">04 — Contact</div>
+        <h2>Let’s make something worth using.</h2>
+        <div class="row">
+          <span class="row-k">Email</span>
+          <a id="emailLink" class="row-v" href="#"></a>
+          <button id="copyEmail" class="copy">Copy</button>
+        </div>
+        <div class="row">
+          <span class="row-k">WhatsApp</span>
+          <a id="waLink" class="row-v" href="#" target="_blank" rel="noopener"></a>
+        </div>
+        <div class="socials" id="socials"></div>
+      </div>
+      <footer>© <span id="year"></span> <span id="footName">AJ Ohi</span></footer>
+    </div>
+  </section>
+</main>
+
+<!-- Effect 3: floating "let's collab" button (glossy pill) -->
+<a id="collab" class="collab" href="#contact"><span id="collabText">let’s collab</span></a>
+
+<script src="script.js"></script>
+</body>
+</html>
